@@ -90,7 +90,7 @@ li {
     background: linear-gradient(
         rgba(34, 34, 34, 0.7), 
         rgba(34, 34, 34, 0.7)
-      ), url("../images/1.png") no-repeat ;
+      ), url("../images/bg1.png") no-repeat ;
       background-size: cover;
 }
 

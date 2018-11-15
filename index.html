@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,800" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/xzoom.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <script src="js/xzoom.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/setup.js"></script>
 	
 </head>
 <body>
@@ -73,10 +75,8 @@
                                     <button type="submit" class="btn-enviar">
                                         ENVIAR
                                   </button>
-                                
-                                
                             </div>
-                            <div class="ajax-response"></div><!-- Displays status when submitting form -->
+                            <div class="ajax-response"></div>
                          </form>
                      </div>
              </div>
@@ -100,17 +100,15 @@
     <section class="producto container">
         <div class="row">
             <div class="col-xs-12 col-sm-12  col-lg-8 text-center">
-                    <div class="divImagenMuestra">
-                            <div class="xzoom-container">
-                              <img class="xzoom" id="xzoom-default" src="images/1.png" xoriginal="images/1.png" />
-                              <div class="xzoom-thumbs">
-                                <a alt="Tanques para combustible" ><img class="xzoom-gallery" width="80" src="images/1.png"  xpreview="images/1.png" title=" Tanque para combustible" id="1" value="1" onmouseover="cambia('1');"></a>
-                                <a alt="Tanques para combustible"><img class="xzoom-gallery" width="80" src="images/2.png" title="The description goes here" id="2" value="2" onmouseover="cambia('2');"></a>
-                                <a alt="Tanques para combustible"><img class="xzoom-gallery" width="80" src="images/3.png" title="The description goes here" id="3" value="3" onmouseover="cambia('3');"></a>
-                               
-                              </div>
-                            </div>        
-                          </div>
+                <div class="xzoom-container">
+                    <img class="xzoom" id="xzoom-default" src="images/1-mediano.png" xoriginal="images/1.png" />
+                    <div class="xzoom-thumbs">
+                      <a href="images/1.png"><img class="xzoom-gallery" src="images/1-mediano.png"  xpreview="images/1.png" title="Tanque para combustible Tankcraft -Lado"></a>
+                      <a href="images/2.png"><img class="xzoom-gallery" src="images/2-mediano.png" title="Tanque para combustible Tankcraft -Frente"></a>
+                      <a href="images/3.png"><img class="xzoom-gallery"  src="images/3-mediano.png" title="Tanque para combustible Tankcraft"></a>
+                     
+                    </div>
+                  </div>
 
             </div>
             <div class="col-xs-12 col-sm-12 col-lg-4">
@@ -135,7 +133,7 @@
              <button class="btn-3">LLÁMANOS </button>
             </div>
 
-        </div>
+          </div>
     </section>
 
     <section class="faq container">
@@ -309,48 +307,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/xzoom.js"></script>
-    <script src="js/jquery.hammer.min.js"></script>
     
-    <script src="js/magnific-popup.js">
-
-    </script>
+    
+    
     <script>
     $(".xzoom").xzoom({tint: '#333', Xoffset: 15});</script>
-
-    <script type="text/javascript">
-      function cambia(val){
-        var nodos = document.getElementById(val);
-        var atributo = nodos.attributes.getNamedItem("src").nodeValue;
-        //alert(atributo);
-        var elementoRecibe = document.getElementById("xzoom-default");
-        elementoRecibe.setAttribute("src", atributo);
-        var elementoRecibe2 = document.getElementById("xzoom-default");
-        elementoRecibe2.setAttribute("src", atributo);
-      }
-    </script>
-    <script>
-      $(document).ready(function() {
-        $('.image-popup').magnificPopup({
-          type: 'image',
-          closeOnContentClick: true,
-          mainClass:'mfp-fade',
-          gallery: {
-          enabled: true,
-          navigateByImgClick: true,
-          preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-          },
-          image: {
-          verticalFit: true,
-          }
-        });
-      });
-    </script>
-
-
-
-    
     </body>
 </html>
 
